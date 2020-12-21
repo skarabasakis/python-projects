@@ -38,6 +38,6 @@ def print_message(is_magic_square):
   else:
     print("Input is not magic square")
 
-stdin = open('square.txt')
+stdin = open('magic_squares/square.txt')
 square = load_square(stdin.read())
 print(is_magic_square(square))
