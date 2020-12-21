@@ -1,4 +1,4 @@
-# A Productive Python Development environment on Windows
+# A Productive Python development environment on Windows
 
 ## System Requirements for WSL2
 
@@ -176,15 +176,15 @@ code ./eratosthenis_sieve
 **Recommended VSCode extensions**
 
 Python specific:
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Debugger and basic intellisense
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Debugger and external tooling support
 - [MagicPython](https://marketplace.visualstudio.com/items?itemName=magicstack.MagicPython): Improved syntax highlighting
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance): Improved intellisense for python codebases
+  - Newer alternative to [Visual Studio Intellisense](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 - [Python Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent): Smarter cursor placement when you press enter
 - [PyInit](https://marketplace.visualstudio.com/items?itemName=DiogoNolasco.pyinit): Convenient command to generate `__init__.py` for modules
 
 General purpose:
-- [Visual Studio Intellisense](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode): Improved intellisense
 - [Terminal](https://marketplace.visualstudio.com/items?itemName=formulahendry.terminal): Toggle integrated terminal with a status bar button
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Pair programming over the internet
-- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Highlight errors on the margin
 - Theme: [Alloy Theme](https://marketplace.visualstudio.com/items?itemName=officerhalf.alloy-theme)
 - Icon Theme: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
