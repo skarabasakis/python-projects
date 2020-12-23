@@ -1,5 +1,5 @@
-from puzzle import Puzzle
-from stick_figure import StickFigure
+from .puzzle import Puzzle
+from .stick_figure import StickFigure
 
 
 class Hangman:
