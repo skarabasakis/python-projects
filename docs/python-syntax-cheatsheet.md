@@ -252,3 +252,7 @@ func(1, first=1)
 #=> TypeError: func() got multiple values for argument 'first'
 ```
 
+## Modules and Packages
+- **Script:** A python source file meant to be executed directly
+- **Module:** A python source file meant to be imported rather than executed directly
+- **Package:** A directory of related modules, including a special `__init__.py` script
