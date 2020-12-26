@@ -1,4 +1,4 @@
-from util import answer, display
+from util import *
 
 display.bordered('Census Questionnaire')
 
