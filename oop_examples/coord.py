@@ -1,17 +1,20 @@
 class Coord:
+    __slots__ = ('x', 'y')
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
-    def quarter():
-        return "quarter"
+    def distance(self, other = None):
+        other = other or Coord(0, 0)
+        return ((self.x - other.x )**2 + (self.y-other.y)**2)**0.5
 
-    def in_quarter(self, quarter):
-        if (quarter == 1):
-            return self.x > 0 and self.y > 0
-        if (quarter == 2):
-            return self.x < 0 and self.y > 0
-        if (quarter == 3):
-            return self.x < 0 and self.y < 0
-        if (quarter == 4):
-            return self.x > 0 and self.y < 0
+    def quadrant(self):
+        if self.x > 0 and self.y > 0:
+            return 1
+        if self.x < 0 and self.y > 0:
+            return 2
+        if self.x < 0 and self.y < 0:
+            return 3
+        if self.x > 0 and self.y < 0:
+            return 4
