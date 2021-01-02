@@ -36,7 +36,7 @@ The keyword `None` represents Python's null value, e.g. `x = None`
 #### Scalars
 - Number: `1` (int), `1.27` (float), `1+3j` (complex)
 	- int representations: `0o77` (octal), `0xFF` (hexadecimal)
-- String: `'john', "john", """john"""`
+- String: `'john', '''john''', "john", """john"""`
 - Boolean: `True`, `False`
 
 #### Collections
@@ -59,7 +59,7 @@ Trailing commas in collection literals are ignored, e.g. `[1,2,3,]`
 ### Strings
 - Enclosed in single quotes (`'john'`) or double quotes (`"john"`)
 - Triple-quoted strings supported for multiline strings: `'''multiple lines here'''`
-- String interpolation (f-strings): `f'Hello {name}. The answer is {41 + 1}'`
+- String interpolation / Formatted string literals (f-strings): `f'Hello {name}. The answer is {41 + 1}'`
 - String formatting operator: `'Hello %s! The answer is %d' % (name,41+1)`
 
 #### String concatenation
@@ -125,6 +125,14 @@ else:
 #### Ternary operator
 `'kid' if age < 18 else 'adult'`
 
+### Named tuples
+```python
+from collections import namedtuple  
+Variable = namedtuple('Type',['keyname1','keyname2','keyname3']) 
+```
+#### Named tuples import
+`from collections import namedtuple` is necessary for using named tuples.
+Named tuples were added in python 2.6, although there is a recipe for implementation in Python 2.4.(https://code.activestate.com/recipes/500261/)
 ### Loops
 ```python
 while condition:
