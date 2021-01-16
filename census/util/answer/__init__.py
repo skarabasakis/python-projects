@@ -1,2 +1,2 @@
-from ./answer import *
+from .answer import *
 del answer
