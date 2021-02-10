@@ -68,6 +68,14 @@ The following examples all return `'helloworld'`:
 - `'hello''world'`
 - `('hello' 'world')`
 
+#### String Literal Escapes
+`\` newline ignored
+`\\` backslash (\)
+`\e` escape (ESC)
+`\t` horizontal tab (TAB)
+`\b` backspace (BS)
+
+
 ### Iterables
 An *iterable* is any object capable of returning its elements (members) one at a time (e.g. in a `for` loop). Iterable types include:
 - strings
