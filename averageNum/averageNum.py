@@ -14,4 +14,4 @@ for num in nums:
 
 average = sum / lengthNum
 
-print(f"\nThe average of the {lengthNum} numbers given is {average} .")
+print(f"\nThe average of the {lengthNum} numbers given is {average:.2f} .")
