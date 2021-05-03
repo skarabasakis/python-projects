@@ -4,24 +4,19 @@ import sys
 
 #Greeklish Converter
 
-GREEKLISH_CHARS = ["a", "b", "g", "d", "e", "ai", "z", "i", "h", "ei", "oi", "th", "k", "l", "m", "n", "x", "o", "w", "p", "r", "s", "t", "y", "f", "ch", "ps", " ", ","]
+GREEKLISH_CHARS = ["a", "b", "g", "d", "e", "z", "i", "h", "k", "l", "m", "n", "x", "o", "w", "p", "r", "s", "t", "y", "f", "u", "v", "th", "ch", "ps", "ks"]
 GREEKLISH_CHARS_CAPITALS = [char.upper() for char in GREEKLISH_CHARS]
+GREEKLISH_CHARS_TITLES = [char.title() for char in GREEKLISH_CHARS]
 
 GREEKLISH_TO_GREEK = {
-    " ": " ", #for spaces to work
-    ",": ",", #for commas to work
     "a": "α",
     "b": "β",
     "g": "γ",
     "d": "δ",
     "e": "ε",
-    "ai": "αι",
     "z": "ζ",
     "i": "ι",
     "h": "η",
-    "ei": "ει",
-    "oi": "οι",
-    "th": "θ",
     "k": "κ",
     "l": "λ",
     "m": "μ",
@@ -35,11 +30,16 @@ GREEKLISH_TO_GREEK = {
     "t": "τ",
     "y": "υ",
     "f": "φ",
+    "u": "υ",
+    "v": "β",
+    "th": "θ",
     "ch": "χ",
-    "ps": "ψ"
+    "ps": "ψ",
+    "ks": "ξ",
 }
 
 GREEKLISH_TO_GREEK_CAPITALS = {k.upper():v.upper() for k,v in GREEKLISH_TO_GREEK.items()}
+GREEKLISH_TO_GREEK_TITLES = {k.title():v.title() for k,v in GREEKLISH_TO_GREEK.items()}
 
 #Check Input
 if len(sys.argv) < 2:
@@ -49,62 +49,42 @@ else:
 
 converted_string = ""
 
-#Convert uppercase
-for capital_letter in string:
-    if str(capital_letter) in GREEKLISH_CHARS_CAPITALS:
-        capital_letter = capital_letter.replace(capital_letter, GREEKLISH_TO_GREEK_CAPITALS[capital_letter])
-        converted_string += capital_letter
-#Convert lowercase
-for letter in string:
-    if str(letter) in GREEKLISH_CHARS:
-        letter = letter.replace(letter, GREEKLISH_TO_GREEK[letter])
-        converted_string += letter
-#Convert symbols
-for symbol in string:
-    if str(symbol) == "?":
-        symbol = symbol.replace("?", ";")
-        converted_string += symbol
-
-
-uppers = [upper for upper in string if letter.isupper()]
-lowers = [lower for lower in string if letter.islower()]
-
-
-#Convert lowercase doubles
-if "πσ" in converted_string:
-    converted_string = converted_string.replace("πσ", "ψ")
-
-if "κσ" in converted_string:
-    converted_string = converted_string.replace("κσ", "ξ")
-
-if "τη" in converted_string:
-    converted_string = converted_string.replace("τη", "θ")
-#Convert UPPERCASE doubles
-if "ΠΣ" in converted_string:
-    converted_string = converted_string.replace("ΠΣ", "Ψ")
-
-if "ΚΣ" in converted_string:
-    converted_string = converted_string.replace("ΚΣ", "Ξ")
-
-if "ΤΗ" in converted_string:
-    converted_string = converted_string.replace("ΤΗ", "Θ")
+### One pass for digrams
+i = 0
+while i < len(string):
+    digram = string[i:i+2]
+    if digram in GREEKLISH_CHARS:
+        converted_string += GREEKLISH_TO_GREEK[digram]
+        i += 1
+    elif digram in GREEKLISH_CHARS_CAPITALS:
+        converted_string += GREEKLISH_TO_GREEK_CAPITALS[digram]
+        i += 1
+    elif digram in GREEKLISH_CHARS_TITLES:
+        converted_string += GREEKLISH_TO_GREEK_TITLES[digram]
+        i += 1
+    else:
+        character = string[i]
+        if character in GREEKLISH_CHARS_CAPITALS:
+            converted_string += GREEKLISH_TO_GREEK_CAPITALS[character]
+        elif character in GREEKLISH_CHARS:
+            converted_string += GREEKLISH_TO_GREEK[character]
+        elif character == '?':
+            converted_string += ';'
+        else:
+            converted_string += character
+    i += 1
 
 #Convert σ to ς at the end of every word
-converted_string_words = converted_string.split(" ")
-while '' in converted_string_words:
-    converted_string_words.remove('')
-
-for word in converted_string_words:
-    if word[-1] == 'σ':
-        converted_string_words.remove(word)
-        word = word[:-1] + "ς"
-        converted_string_words.append(word)
+converted_string_words = converted_string.split()
+for i in range(0, len(converted_string_words)):
+    if converted_string_words[i][-1] == 'σ':
+        converted_string_words[i] = converted_string_words[i][:-1] + "ς"
+converted_string = " ".join(converted_string_words)
 
 
-print(" ".join(converted_string_words))
-        
+print(converted_string)
 
-
-
-#TODO
-#Fix bug: Capitals go first, lowercase next, symbols last.
+# TODO
+# 1. To for stin grammi 79 isws einai peritto, mporw na to sygxwneysw mesa sto while? (treat "s " as digram)
+# 2. Mporw na kanw .isupper() anti na ftiaxnw olokliri lista me upper()?
+# 3. Mporw na valw tous xamenous tonous me ti voitheia enos leksikou olwn twn ellinikwn leksewn.
