@@ -4,10 +4,6 @@ import sys
 
 #Greeklish Converter
 
-GREEKLISH_CHARS = ["a", "b", "g", "d", "e", "z", "i", "h", "k", "l", "m", "n", "x", "o", "w", "p", "r", "s", "t", "y", "f", "u", "v", "th", "ch", "ps", "ks"]
-GREEKLISH_CHARS_CAPITALS = [char.upper() for char in GREEKLISH_CHARS]
-GREEKLISH_CHARS_TITLES = [char.title() for char in GREEKLISH_CHARS]
-
 GREEKLISH_TO_GREEK = {
     "a": "α",
     "b": "β",
@@ -35,7 +31,7 @@ GREEKLISH_TO_GREEK = {
     "th": "θ",
     "ch": "χ",
     "ps": "ψ",
-    "ks": "ξ",
+    "ks": "ξ"
 }
 
 GREEKLISH_TO_GREEK_CAPITALS = {k.upper():v.upper() for k,v in GREEKLISH_TO_GREEK.items()}
@@ -50,28 +46,31 @@ else:
 converted_string = ""
 
 ### One pass for digrams
+
 i = 0
+
 while i < len(string):
     digram = string[i:i+2]
-    if digram in GREEKLISH_CHARS:
+    if digram in GREEKLISH_TO_GREEK:
         converted_string += GREEKLISH_TO_GREEK[digram]
         i += 1
-    elif digram in GREEKLISH_CHARS_CAPITALS:
-        converted_string += GREEKLISH_TO_GREEK_CAPITALS[digram]
+    elif digram in GREEKLISH_TO_GREEK_CAPITALS:
+        converted_string += GREEKLISH_TO_GREEK_CAPITALS[digram.upper()]        
         i += 1
-    elif digram in GREEKLISH_CHARS_TITLES:
-        converted_string += GREEKLISH_TO_GREEK_TITLES[digram]
+    elif digram in GREEKLISH_TO_GREEK_TITLES:
+        converted_string += GREEKLISH_TO_GREEK_TITLES[digram.title()]
         i += 1
     else:
         character = string[i]
-        if character in GREEKLISH_CHARS_CAPITALS:
+        if character.isupper():
             converted_string += GREEKLISH_TO_GREEK_CAPITALS[character]
-        elif character in GREEKLISH_CHARS:
+        elif character in GREEKLISH_TO_GREEK:
             converted_string += GREEKLISH_TO_GREEK[character]
         elif character == '?':
             converted_string += ';'
         else:
             converted_string += character
+
     i += 1
 
 #Convert σ to ς at the end of every word
@@ -85,6 +84,6 @@ converted_string = " ".join(converted_string_words)
 print(converted_string)
 
 # TODO
-# 1. To for stin grammi 79 isws einai peritto, mporw na to sygxwneysw mesa sto while? (treat "s " as digram)
-# 2. Mporw na kanw .isupper() anti na ftiaxnw olokliri lista me upper()?
-# 3. Mporw na valw tous xamenous tonous me ti voitheia enos leksikou olwn twn ellinikwn leksewn.
+# 1. To for stin grammi 79 isws einai peritto, mporw na to sygxwneysw mesa sto while? (treat "s " as digram) -> PENDING
+# 2. Mporw na kanw .isupper() anti na ftiaxnw olokliri lista me upper()? -> DONE
+# 3. Mporw na valw tous xamenous tonous me ti voitheia enos leksikou olwn twn ellinikwn leksewn. -> PENDING
