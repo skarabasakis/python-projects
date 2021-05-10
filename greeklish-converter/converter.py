@@ -22,7 +22,6 @@ GREEKLISH_TO_GREEK = {
     "w": "ω",
     "p": "π",
     "r": "ρ",
-    "s": "σ",
     "t": "τ",
     "y": "υ",
     "f": "φ",
@@ -60,6 +59,13 @@ while i < len(string):
     elif digram in GREEKLISH_TO_GREEK_TITLES:
         converted_string += GREEKLISH_TO_GREEK_TITLES[digram.title()]
         i += 1
+
+    elif digram[0].lower() == 's':
+        if len(digram) == 2 and digram[1].isalpha():
+            converted_string += "Σ" if digram[0].isupper() else 'σ'
+        else:
+            converted_string += "Σ" if digram[0].isupper() else 'ς'
+
     else:
         character = string[i]
         if character.isupper():
@@ -72,13 +78,6 @@ while i < len(string):
             converted_string += character
 
     i += 1
-
-#Convert σ to ς at the end of every word
-converted_string_words = converted_string.split()
-for i in range(0, len(converted_string_words)):
-    if converted_string_words[i][-1] == 'σ':
-        converted_string_words[i] = converted_string_words[i][:-1] + "ς"
-converted_string = " ".join(converted_string_words)
 
 
 print(converted_string)
