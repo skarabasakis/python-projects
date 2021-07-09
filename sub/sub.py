@@ -1,7 +1,7 @@
 #Subscription Manager
-import dateparser #make sure to install this module with "pip install dateparser"
 import sys
 import time
+import json
 from datetime import date, datetime
 
 class Sub:
@@ -20,8 +20,10 @@ class Sub:
 
         def record_subscription(self):
             subscriptions[id] = [cost,frequency,date.today(),ends_on]
-            # print(subscriptions)
-            
+            with open('subscriptions.json', 'w') as f:
+                json.dump(subscriptions[id], f, default=str, indent=6)
+
+
 
 if __name__ == "__main__":
     #parser
@@ -71,4 +73,5 @@ if __name__ == "__main__":
                 exit()
 
     #BUG: ends_on contains time instead of just date.
-    #TODO: save subscriptions in a text file instead of a dictionary.
+    #BUG: json.dump() doesn't work.
+    #TODO: Work on another command.
