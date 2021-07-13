@@ -51,10 +51,18 @@ if __name__ == "__main__":
                 id = sys.argv[2]
                 cost = sys.argv[4].partition("/")[0]
                 frequency = sys.argv[4].partition("/")[-1]
-                if date.today().month > time.strptime(sys.argv[-1],'%B').tm_mon:
-                    ends_on = (datetime(date.today().year+1, time.strptime(sys.argv[-1],'%B').tm_mon, date.today().day))
-                else:
-                    ends_on = (datetime(date.today().year, time.strptime(sys.argv[-1],'%B').tm_mon, date.today().day))
+                if sys.argv[-1] in MONTHS:
+                    if date.today().month > time.strptime(sys.argv[-1],'%B').tm_mon:
+                        ends_on = (datetime(date.today().year+1, time.strptime(sys.argv[-1],'%B').tm_mon, date.today().day))
+                    else:
+                        ends_on = (datetime(date.today().year, time.strptime(sys.argv[-1],'%B').tm_mon, date.today().day))
+
+                elif sys.argv[-1] in DAYS:
+                    try:
+                        ends_on = (datetime(date.today().year, date.today().month, time.strptime(sys.argv[-1],'%A').tm_wday))
+                    except ValueError:
+                        ends_on = (datetime(date.today().year, date.today().month, time.strptime(sys.argv[-1],'%A').tm_wday+7))
+
 
                 new_command = Sub.Add(id, cost, frequency, date.today(), ends_on)
                 new_command.record_subscription()
@@ -110,11 +118,19 @@ if __name__ == "__main__":
                     id = prompt[1]
                     cost = prompt[3].partition("/")[0]
                     frequency = prompt[3].partition("/")[-1]
+
+                if prompt[-1] in MONTHS:
                     if date.today().month > time.strptime(prompt[-1],'%B').tm_mon:
                         ends_on = (datetime(date.today().year+1, time.strptime(prompt[-1],'%B').tm_mon, date.today().day))
                     else:
                         ends_on = (datetime(date.today().year, time.strptime(prompt[-1],'%B').tm_mon, date.today().day))
-            
+
+                elif prompt[-1] in DAYS:
+                    try:
+                        ends_on = (datetime(date.today().year, date.today().month, time.strptime(prompt[-1],'%A').tm_wday))
+                    except ValueError:
+                        ends_on = (datetime(date.today().year, date.today().month, time.strptime(prompt[-1],'%A').tm_wday+7))
+
                 new_command = Sub.Add(id, cost, frequency, date.today(), ends_on)
                 new_command.record_subscription()
 
@@ -159,5 +175,4 @@ if __name__ == "__main__":
     #BUG: ends_on contains time instead of just date.
     #BUG: json.dump() doesn't work.
     #TODO: Check for next weekly and daily frequency
-    #TODO: Days should work as well for a subscriptions cancellation day (Add.ends_on)
     #TODO: Check for lifetime or free subscriptions (haven't decided yet)
