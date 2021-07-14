@@ -23,6 +23,7 @@ class Sub:
 
         def record_subscription(self):
             subscriptions[id] = [cost,frequency,date.today(),ends_on]
+            print(subscriptions)
             with open('subscriptions.json', 'w') as f:
                 json.dump(subscriptions[id], f, default=str, indent=6)
 
@@ -38,6 +39,12 @@ class Sub:
                 for element in json.load('subscriptions.json'): 
                     del element[id]
 
+    def list(self):
+        with open('subscriptions.json', 'r') as f:
+            for element in json.load(f):
+                # print(element)
+                pass
+                    
 
 
 
@@ -94,6 +101,12 @@ if __name__ == "__main__":
 
                 new_command = Sub.Cancel(id, ends_on)
                 new_command.cancel_subscription()
+
+        elif len(sys.argv) == 2:
+            if sys.argv[1] == "list":
+
+                new_command = Sub()
+                new_command.list()
 
         else:
 
@@ -157,6 +170,11 @@ if __name__ == "__main__":
 
                     new_command = Sub.Cancel(id, ends_on)
                     new_command.cancel_subscription()
+
+            elif prompt[0] == "list":
+                
+                new_command = Sub()
+                new_command.list()
 
             else:
 
