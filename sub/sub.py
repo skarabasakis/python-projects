@@ -23,7 +23,7 @@ class Sub:
 
         def record_subscription(self):
             subscriptions[id] = [cost,frequency,date.today(),ends_on]
-            print(subscriptions)
+            # print(subscriptions)
             with open('subscriptions.json', 'w') as f:
                 json.dump(subscriptions[id], f, default=str, indent=6)
 
@@ -57,7 +57,10 @@ if __name__ == "__main__":
             if "to" in sys.argv:                        
                 id = sys.argv[2]
                 cost = sys.argv[4].partition("/")[0]
-                frequency = sys.argv[4].partition("/")[-1]
+                frequency = sys.argv[4].partition("/")[-1] if sys.argv[4].partition("/")[-1][-1] in ['w', 'm', 'd', 'y'] else None
+                if frequency == None:
+                    print(sys.argv[4].partition("/")[-1] + ": Invalid frequency input.\nTry 'm', 'd', 'y' or 'w'.")
+                    exit()
                 if sys.argv[-1] in MONTHS:
                     if date.today().month > time.strptime(sys.argv[-1],'%B').tm_mon:
                         ends_on = (datetime(date.today().year+1, time.strptime(sys.argv[-1],'%B').tm_mon, date.today().day))
@@ -130,7 +133,10 @@ if __name__ == "__main__":
                 if "to" in prompt:        
                     id = prompt[1]
                     cost = prompt[3].partition("/")[0]
-                    frequency = prompt[3].partition("/")[-1]
+                    frequency = prompt[3].partition("/")[-1] if prompt[3].partition("/")[-1][-1] in ['w', 'm', 'd', 'y'] else None
+                    if frequency == None:
+                        print(prompt[3].partition("/")[-1] + ": Invalid frequency input.\nTry 'm', 'd', 'y' or 'w'.")
+                        exit()
 
                 if prompt[-1] in MONTHS:
                     if date.today().month > time.strptime(prompt[-1],'%B').tm_mon:
@@ -192,5 +198,5 @@ if __name__ == "__main__":
 
     #BUG: ends_on contains time instead of just date.
     #BUG: json.dump() doesn't work.
-    #TODO: Check for next weekly and daily frequency
-    #TODO: Check for lifetime or free subscriptions (haven't decided yet)
+    #TODO: Check for lifetime or free subscriptions (haven't decided yet).
+    #TODO: Tomorrow, next week, next month, next year should work with Add and Cancel.
