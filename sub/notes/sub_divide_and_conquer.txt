@@ -1,0 +1,44 @@
+Step 0. Load (Deserialize) json file into `subscriptions` variable
+
+Step 1. Parse and validate command
+   1a. Parse
+   1b. Validate
+       b1. Validate syntax (e.g. frequency = z)
+       b2. Validate internal logic (e.g. add: ends_on < starts_on )
+       b3. Validate external logic (e.g. cancel: ends_on < starts_on in json )
+
+    Result:
+        command = Add | Cancel | List | ...
+        arguments:
+            id = netflix.com
+            cost =  14
+            frequency =
+            starts_on = date.today()
+            ends_on = None
+
+    #sub to netflix.com for 14/m until december      # 19 Oct 2019
+    #    starts_on = 19 Oct 2019
+    #    ends_on = 19 Dec 2019
+    #
+    #sub cancel netflix.com on january 2020         # 1 Feb 2020
+    #    starts_on = 19 Oct 2019
+    #    ends_on = 19 Jan 1900
+
+2. Execute command
+    2a. Mutate `subscriptions` (if needed)
+    2b. Return output
+
+3. Serialize subscription data into a json file
+
+-----------------------------------------
+
+# Text vs Binary formats:
+    Text = TXT | INI | JSON | XML | YAML | TOML
+    Binary = .....
+
+# Memory vs Files
+    Memory = Random Access
+    Files = Serial Access
+
+    Serialize = dump memory into file
+    Deserialize = load file into memory
