@@ -50,7 +50,6 @@ class Sub:
 
 if __name__ == "__main__":
     #parser
-    try:
 
         #ADD command
         if len(sys.argv) == 7:
@@ -121,79 +120,8 @@ if __name__ == "__main__":
                 new_command.cancel_subscription()
 
             else:
-                raise IndexError
-
-    except IndexError:
-
-        while True:
-            prompt = input("sub> ").split(" ")
-
-            #ADD command
-            if len(prompt) == 6: #doesn't contain "sub" for running the program, it's already running.
-                if "to" in prompt:        
-                    id = prompt[1]
-                    cost = prompt[3].partition("/")[0]
-                    frequency = prompt[3].partition("/")[-1] if prompt[3].partition("/")[-1][-1] in ['w', 'm', 'd', 'y'] else None
-                    if frequency == None:
-                        print(prompt[3].partition("/")[-1] + ": Invalid frequency input.\nTry 'm', 'd', 'y' or 'w'.")
-                        exit()
-
-                if prompt[-1] in MONTHS:
-                    if date.today().month > time.strptime(prompt[-1],'%B').tm_mon:
-                        ends_on = (datetime(date.today().year+1, time.strptime(prompt[-1],'%B').tm_mon, date.today().day))
-                    else:
-                        ends_on = (datetime(date.today().year, time.strptime(prompt[-1],'%B').tm_mon, date.today().day))
-
-                elif prompt[-1] in DAYS:
-                    try:
-                        ends_on = (datetime(date.today().year, date.today().month, time.strptime(prompt[-1],'%A').tm_wday))
-                    except ValueError:
-                        ends_on = (datetime(date.today().year, date.today().month, time.strptime(prompt[-1],'%A').tm_wday+7))
-
-                new_command = Sub.Add(id, cost, frequency, date.today(), ends_on)
-                new_command.record_subscription()
-
-            #CANCEL command
-            elif len(prompt) == 4:
-                if "cancel" in prompt:
-                    if "on" in prompt: #look for a date
-                        if prompt[-1] in MONTHS:
-                            if date.today().month > time.strptime(prompt[-1],'%B').tm_mon:
-                                ends_on = (datetime(date.today().year+1, time.strptime(prompt[-1],'%B').tm_mon, date.today().day))
-                            else:
-                                ends_on = (datetime(date.today().year, time.strptime(prompt[-1],'%B').tm_mon, date.today().day))
-                        else:
-                            if prompt[-1] in DAYS:
-                                try:
-                                    ends_on = (datetime(date.today().year, date.today().month, time.strptime(prompt[-1],'%A').tm_wday))
-                                except ValueError:
-                                    ends_on = (datetime(date.today().year, date.today().month, time.strptime(prompt[-1],'%A').tm_wday+7))
-                            else:
-                                print("Invalid input.")
-                                exit()
-
-                    id = prompt[1]
-
-                    new_command = Sub.Cancel(id, ends_on)
-                    new_command.cancel_subscription()
-
-            elif prompt[0] == "list":
-                
-                new_command = Sub()
-                new_command.list()
-
-            else:
-
-                #alternative cancel method
-                if len(prompt) == 2:
-                    id = prompt[1] #id is second arg
-                    ends_on = None
-                    new_command = Sub.Cancel(id, ends_on)
-                    new_command.cancel_subscription()
-                    
-                else:
-                    print("Invalid input.")
-                    exit(2)
+                # raise IndexError this should be an error/usage message
+                pass
 
 
     #BUG: ends_on contains time instead of just date.
