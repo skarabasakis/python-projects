@@ -39,12 +39,16 @@ class Sub:
                 for element in json.load('subscriptions.json'): 
                     del element[id]
 
-    def list(self):
+class List:
+
+    def __init__(self): pass
+
+    def execute(self):
         with open('subscriptions.json', 'r') as f:
             for element in json.load(f):
                 # print(element)
                 pass
-                    
+                
 
 
 
@@ -107,8 +111,8 @@ if __name__ == "__main__":
         elif len(sys.argv) == 2:
             if sys.argv[1] == "list":
 
-                new_command = Sub()
-                new_command.list()
+                new_command = List()
+                new_command.execute()
 
         else:
 
