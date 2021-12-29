@@ -5,7 +5,10 @@ import json
 from datetime import date, datetime
 
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+MONTHS = [month[:3] for month in MONTHS] + MONTHS + [ int(a) for a in range(1, len(MONTHS) + 1)]
+
 DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+DAYS = [day[:3] for day in DAYS] + DAYS + [ int(a) for a in range(1, len(DAYS) + 1)]
 
 class Sub:
 
