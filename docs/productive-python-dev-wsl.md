@@ -101,11 +101,16 @@ By default the starting directory for your linux terminal is your windows home d
         ```
         ssh-keygen -f ~/.ssh/github -t rsa -N ""
         ```
-    2. Copy public key to the windows clipboard
+    2. Add Key Identity
+        ```
+        ssh-add ~/.ssh/github
+        ```
+      
+    3. Copy public key to the windows clipboard
         ```
         clip.exe < ~/.ssh/github.pub
         ```
-    3. Add the key on [your GitHub account settings](https://github.com/settings/ssh/new)
+    4. Add the key on [your GitHub account settings](https://github.com/settings/ssh/new)
         - **Title:** My Ubuntu WSL key
         - **Key**: Press `Ctrl + V` to paste your key
 - [ ] [Replace bash with zsh](https://www.addictivetips.com/ubuntu-linux-tips/switch-from-bash-to-zsh-on-linux/)
