@@ -14,7 +14,13 @@ nav {
     height: 70px;
     width: 100%;
     padding: 0 100px;
+
+    transition: border-color 0.3s ease-in-out;
 }
+
+.nav-border {
+    border-bottom: 1px solid var(--black);
+  }
 
 nav .logo {
     color: #333;

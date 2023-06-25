@@ -1,3 +1,4 @@
+// MENU
 const menuBtn = document.querySelector(".menu-icon span");
     const searchBtn = document.querySelector(".search-icon");
     const cancelBtn = document.querySelector(".cancel-icon");
@@ -22,3 +23,19 @@ const menuBtn = document.querySelector(".menu-icon span");
       searchBtn.classList.add("hide");
       cancelBtn.classList.add("show");
     }
+
+
+// BORDER ON SCROLL
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('nav');
+      var scrollPosition = window.scrollY;
+    
+      // Set the scroll position at which we want to add the border
+      var scrollThreshold = window.innerHeight * 0.62; // 75% of viewport height, around end of hero header
+      if (scrollPosition >= scrollThreshold) {
+        navbar.classList.add('nav-border');
+      } else {
+        navbar.classList.remove('nav-border');
+      }
+    });
+    
