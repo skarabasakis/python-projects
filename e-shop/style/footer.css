@@ -1,0 +1,36 @@
+footer {
+    position: relative;
+    height: 100px;
+    background: var(--main-bg);
+    border-top: var(--glass-footer-border);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer p {
+    color: var(--main-link-hover);
+    margin-right: var(--margin-l-r);
+}
+
+footer .content i {
+    color: var(--heart-color);
+}
+
+footer button {
+    position: fixed;
+    bottom: 2rem;
+    left: var(--margin-l-r);
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--main-txt);
+    color: rgb(246, 246, 246);
+    padding: .8rem;
+    cursor: pointer;
+    opacity: 0;
+}
