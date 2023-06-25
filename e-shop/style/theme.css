@@ -633,31 +633,31 @@ footer button {
 
 /* Works on common browsers  */
 ::selection {
-    background: #1abc9c;
-    color: #333;
+    background: var(--black);
+    color: var(--white);
   }
   
   /* Mozilla based browsers  */
   ::-moz-selection {
-    background: #1abc9c;
-    color: #333;
+    background: var(--black);
+    color: var(--white);
   }
   
   /*  Other Browsers  */
   ::-o-selection {
-    background: #1abc9c;
-    color: #333;
+    background: var(--black);
+    color: var(--white);
   }
   
   ::-ms-selection {
-    background: #1abc9c;
-    color: #333;
+    background: var(--black);
+    color: var(--white);
   }
   
   /* Webkit Browsers */
   ::-webkit-selection {
-    background: #1abc9c;
-    color: #333;
+    background: var(--black);
+    color: var(--white);
   }
 
 
