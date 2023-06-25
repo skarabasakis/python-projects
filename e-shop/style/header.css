@@ -58,7 +58,7 @@ header .logo .sec {
     color:#fff;
     height: 62vh;
     width: 100%;
-    position: fixed;
+    position: relative;
     background-image:url(../images/header/pexels-ron-lach-9539789.jpg);
     /* url(https://images.pexels.com/photos/5845008/pexels-photo-5845008.jpeg?auto=compress&cs=tinysrgb&w=1600; url(https://images.pexels.com/photos/4380880/pexels-photo-4380880.jpeg?auto=compress&cs=tinysrgb&w=1600)  url(https://images.pexels.com/photos/7034697/pexels-photo-7034697.jpeg?auto=compress&cs=tinysrgb&w=1600); */
     background-position: center;
