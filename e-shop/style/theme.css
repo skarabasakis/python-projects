@@ -254,6 +254,15 @@ header .logo .sec {
     background-size: cover;
   }
 
+  #top button {
+    padding: 8px;
+  }
+
+  #top button:hover {
+    cursor: pointer;
+  }
+
+
   header {
     text-align: right;
     float: right; 
