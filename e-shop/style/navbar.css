@@ -3,8 +3,8 @@ nav {
     z-index: 99;
     background: transparent;
     /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
-    backdrop-filter: blur(19.5px);
-    -webkit-backdrop-filter: blur(19.5px);
+    backdrop-filter: blur(20.5px);
+    -webkit-backdrop-filter: blur(20.5px);
     /* border: 1px solid rgba(255, 255, 255, 0.18); */
     position: fixed;
     display: flex;
@@ -20,7 +20,7 @@ nav {
 
 .nav-border {
     border-bottom: 1px solid var(--black);
-  }
+}
 
 nav .logo {
     color: #333;
@@ -95,7 +95,7 @@ nav .search-icon {
     text-align: center;
     margin: 0 50px;
     font-size: 18px;
-    color: #333;
+    color: var(--white);
     cursor: pointer;
     display: none;
 }
@@ -128,10 +128,14 @@ nav .search-icon {
         top: 70px;
         width: 100%;
         left: -100%;
-        height: 100%;
         padding: 10px 50px 0 50px;
         text-align: center;
-        background: #14181f;
+        background: #1e232baf;
+        /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
+        backdrop-filter: blur(20.5px);
+        -webkit-backdrop-filter: blur(20.5px);
+        /* border: 1px solid rgba(255, 255, 255, 0.18); */
+        position: fixed;
         display: inline-block;
         transition: left 0.3s ease;
     }
@@ -152,14 +156,14 @@ nav .search-icon {
     nav form {
         position: absolute;
         top: 80px;
-        right: 50px;
+        right: 3.9em;
         opacity: 0;
         pointer-events: none;
         transition: top 0.3s ease, opacity 0.1s ease;
     }
 
     nav form.active {
-        top: 95px;
+        top: 4.755em;
         opacity: 1;
         pointer-events: auto;
     }
@@ -177,13 +181,14 @@ nav .search-icon {
         margin: -20px 0 0;
     }
 
+
     nav form:after {
         position: absolute;
         content: '';
         height: 60px;
         padding: 2px;
         background: #1e232b;
-        border-radius: 2px;
+        border-radius: 5px;
         min-width: calc(100% + 20px);
         z-index: -2;
         left: 50%;
@@ -232,9 +237,19 @@ nav .search-icon {
     margin: 10px 0;
 }
 
-nav .logo.space {
-    color: red;
-    padding: 0 5px 0 0;
+@media (max-width: 1142px) {
+    nav form .search-data {color: var(--white);}
+
+    nav .nav-items li a {
+        color: var(--white);
+    }
+
+    nav .nav-items li a:hover {
+        color: #e4c4a1;
+    }
+
+    .searchbar {display: none;}
+  
 }
 
 @media (max-width: 980px) {
@@ -258,25 +273,4 @@ nav .logo.space {
         margin: 0 10px;
         font-size: 16px;
     }
-}
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.content header {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.content .text {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.content .space {
-    margin: 10px 0;
 }
