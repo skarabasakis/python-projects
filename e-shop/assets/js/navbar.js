@@ -45,7 +45,7 @@ document.addEventListener("click", (event) => {
 });
 
 
-// BORDER ON SCROLL
+// BORDER & COLOR CHANGE ON SCROLL
 window.addEventListener('scroll', function () {
   var navbar = document.querySelector('nav');
   var scrollPosition = window.scrollY;
@@ -54,7 +54,10 @@ window.addEventListener('scroll', function () {
   var scrollThreshold = window.innerHeight * 0.62; // 75% of viewport height, around end of hero header
   if (scrollPosition >= scrollThreshold) {
     navbar.classList.add('nav-border');
+    navbar.classList.add('nav-dark');
+
   } else {
     navbar.classList.remove('nav-border');
+    navbar.classList.remove('nav-dark');
   }
 });

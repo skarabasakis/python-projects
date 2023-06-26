@@ -22,6 +22,16 @@ nav {
     border-bottom: 1px solid var(--black);
 }
 
+.nav-dark{
+    background: #1e232baf;
+    /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
+    backdrop-filter: blur(20.5px);
+    -webkit-backdrop-filter: blur(20.5px);
+}
+
+.nav-dark *, .nav-dark .logo {color: var(--white);}
+
+
 nav .logo {
     color: #333;
     font-size: 30px;
