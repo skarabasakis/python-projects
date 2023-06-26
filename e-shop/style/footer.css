@@ -1,36 +1,125 @@
-footer {
+.footer {
+    font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 10em;
     position: relative;
-    height: 100px;
-    background: var(--main-bg);
-    border-top: var(--glass-footer-border);
+    width: 100%;
+    background: var(--black);
+    min-height: 100px;
+    padding: 20px 50px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-footer p {
-    color: var(--main-link-hover);
-    margin-right: var(--margin-l-r);
-}
-
-footer .content i {
-    color: var(--heart-color);
-}
-
-footer button {
-    position: fixed;
-    bottom: 2rem;
-    left: var(--margin-l-r);
-    display: inline-flex;
-    -moz-box-align: center;
-    align-items: center;
-    -moz-box-pack: center;
     justify-content: center;
-    border: none;
-    border-radius: 0.5rem;
-    background: var(--main-txt);
-    color: rgb(246, 246, 246);
-    padding: .8rem;
-    cursor: pointer;
-    opacity: 0;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer a:hover {
+    color: #e4c4a1
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p,
+.footer span {
+    color: var(--white);
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../style/wave/wave.png");
+    background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
 }
