@@ -7,6 +7,12 @@
       max-width: 250px;
       margin: auto;
       text-align: center;
+
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 9px var(--black-shadow)
     }
 
     .card h1 {
@@ -46,3 +52,40 @@
       color: var(--black);
       background-color: #ececec;
     }
+
+
+
+    /* GRID */
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  flex-basis: 25%;
+  padding: .89rem;
+}
+
+@media (max-width: 1000px) {
+  .cards_item {
+    flex-basis: 33.3%;
+  }
+}
+
+@media (max-width: 856px) {
+  .cards_item {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 526px) {
+  .cards_item {
+    flex-basis: 100%;
+  }
+  .card {max-width: 70%;}
+}
