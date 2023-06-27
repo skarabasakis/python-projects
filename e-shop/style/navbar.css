@@ -31,7 +31,11 @@ nav {
 
  .nav-dark *, .nav-dark form .search-data, .nav-dark .logo, .nav-dark .nav-items li a {color: var(--white);}
  .nav-dark .nav-items li a:hover {color: #e4c4a1;}
-
+ .nav-dark form.active {background-color: var(--black);}
+ .nav-dark form.active input {color: #e4c4a1;}
+ .nav-dark form.active::after {background-color: var(--black);}
+ .nav-dark form button:hover {color: var(--black);background-color: #e4c4a1;}
+ .nav-dark form button {color: #e4c4a1;background-color: transparent;}
 
 nav .logo {
     color: #333;

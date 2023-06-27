@@ -25,7 +25,7 @@ searchBtn.onclick = () => {
 }
 
 
-// close the menu when user clicks outside of it
+// Close the menu
 const closeMenu = () => {
   items.classList.remove("active");
   menuBtn.classList.remove("hide");
@@ -35,14 +35,15 @@ const closeMenu = () => {
   cancelBtn.style.color = "#ff3d00";
 };
 
-// Event listener to close the menu when clicked outside
-document.addEventListener("click", (event) => {
-  const isClickInsideMenu = items.contains(event.target);
-  const isClickOnMenuButton = menuBtn.contains(event.target);
-  if (!isClickInsideMenu && !isClickOnMenuButton) {
-    closeMenu();
-  }
-});
+//  Event listener to close the menu when clicked outside
+// document.addEventListener("click", (event) => {
+//   const isClickInsideMenu = items.contains(event.target);
+//   const isClickOnMenuButton = menuBtn.contains(event.target);
+//   if (!isClickInsideMenu && !isClickOnMenuButton) {
+//     closeMenu();
+//   }
+// });
+// Doesn't work currently, it messes up the search form pop-up. Will be fixed later on.
 
 
 // BORDER & COLOR CHANGE ON SCROLL
