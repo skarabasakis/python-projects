@@ -23,13 +23,14 @@ nav {
 }
 
 .nav-dark{
-    background: #1e232baf;
+    background: var(--black-shadow);
     /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
     backdrop-filter: blur(20.5px);
     -webkit-backdrop-filter: blur(20.5px);
 }
 
-.nav-dark *, .nav-dark .logo {color: var(--white);}
+ .nav-dark *, .nav-dark form .search-data, .nav-dark .logo, .nav-dark .nav-items li a {color: var(--white);}
+ .nav-dark .nav-items li a:hover {color: #e4c4a1;}
 
 
 nav .logo {
@@ -140,7 +141,7 @@ nav .search-icon {
         left: -100%;
         padding: 10px 50px 0 50px;
         text-align: center;
-        background: #1e232baf;
+        background: var(--black-shadow);
         /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
         backdrop-filter: blur(20.5px);
         -webkit-backdrop-filter: blur(20.5px);
