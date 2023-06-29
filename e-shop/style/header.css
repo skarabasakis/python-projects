@@ -101,7 +101,7 @@ header .logo .sec {
     line-height: 1em;
   }
 
-  header h1, header h2 {color: var(--black);}
+  header h1, header h2 {color: var(--black);letter-spacing: -1px;}
 
 
   /* Media Query for small screens */

@@ -1,0 +1,119 @@
+.container {
+  font-family: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+    color: #e4c4a1;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .items-list {
+    max-width: 90vw;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .item {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e4c4a1;
+    cursor: pointer;
+  }
+  .item span {
+    background: var(--black);
+    box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+    border-radius: 0.6rem;
+    padding: 2rem;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+  }
+  .item:hover span {
+    transform: scale(1.2);
+    color: var(--black);
+  }
+  .item p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: var(--black);
+  }
+  
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    margin: 3rem;
+    border-radius: 0.6rem;
+    background: var(--black);
+    box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+  }
+  .page__numbers, .page__btn, .page__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  .page__dots {
+    width: 2.6rem;
+    height: 2.6rem;
+    color: var(--white);
+    cursor: initial;
+  }
+  .page__numbers {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 0.4rem;
+  }
+  .page__numbers:hover {
+    color: var(--white);
+  }
+  .page__numbers.active {
+    color: #ffffff;
+    font-weight: 800;
+  }
+  .page__btn span{
+    color: var(--white);
+    pointer-events: none;
+  }
+  .page__btn.active {
+    color: var(--white);
+    pointer-events: initial;
+  }
+  .page__btn.active:hover {
+    color: var(--white);
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .items-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page {
+      position: sticky;
+      top: 0;
+      height: 2.5rem;
+    }
+
+  .page, .page * {
+    max-width: 90vw;
+    font-size: 1em;
+  }
+
+  }
+  
