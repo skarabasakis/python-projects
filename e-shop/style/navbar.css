@@ -44,6 +44,12 @@ nav .logo {
     letter-spacing: -1px;
 }
 
+
+nav .logo a {
+    color: #333 !important;
+}
+
+
 nav .nav-items {
     display: flex;
     flex: 1;

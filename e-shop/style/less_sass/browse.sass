@@ -1,0 +1,53 @@
+$gutter_0: .75rem;
+$gutter_1: 1.25rem;
+$gutter_2: 1.75rem;
+$bg-color: white;
+
+.sidebar {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.widget {
+  padding: $gutter_0 $gutter_1;
+  width: 278px;
+  color: rgba(0,0,0,0.87);
+  background-color: $bg-color;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  h2 {
+    background-color: darken($bg-color, 4%);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-top: -$gutter_0;
+    margin-left: -$gutter_1;
+    margin-right: -$gutter_1;
+    padding: $gutter_0 $gutter_1;
+    text-align: center;
+    cursor: default;
+  }
+  form {
+    label {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &:hover {
+    h2 {
+      background-color: darken($bg-color, 8%);
+    }
+  }
+}
+
+#user_age_handler_min, #user_age_handler_max {
+    width: 3em;
+    margin-left: -1.5em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }

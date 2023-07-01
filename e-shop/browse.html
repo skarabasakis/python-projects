@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <title>eBookVerse | Where Digital Pages Come Alive </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <link rel="stylesheet" href="style/theme.css">
+  <link rel="stylesheet" href="style/browse.css">
+
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/navbar.css">
+  <link rel="stylesheet" href="style/pagination.css">
+  <link rel="stylesheet" href="style/card.css">
+
+  <link rel="stylesheet" href="style/footer.css">
+
+
+  <link rel="stylesheet" href="">
+  <link rel="shortcut icon" href="" />
+
+</head>
+
+<body>
+  <nav>
+    <div class="menu-icon">
+      <span class="fas fa-bars"></span>
+    </div>
+    <div class="logo">
+      <a href="index.html">eBookVerse</a></div>
+    <div class="nav-items">
+
+      <li><a href="#">Browse</a></li>
+      <li><a href="#">About us</a></li>
+
+      <li><a href="#">Cart</a></li>
+    </div>
+    <div class="search-icon">
+      <span class="fas fa-search"></span>
+    </div>
+    <div class="cancel-icon">
+      <div class="searchbar">
+        <input type="text" placeholder="search">
+        <div class="icon">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+      <span class="fas fa-times"></span>
+    </div>
+    <form action="#">
+      <input type="search" class="search-data" placeholder="Search titles, authors, ISBN..." required>
+      <button type="submit" class="fas fa-search"></button>
+    </form>
+  </nav>
+
+<div class="browse-content">
+  <h1 id="title">Browse by Category</h1>
+
+
+    <div class="widget user_widget_search">
+      <h2>Filter By</h2>
+      <form id="user_widget_search_form" class="user_widget_search_form" method="GET">
+        <div class="form-group">
+          <label for="user_term">Search Term</label>
+      <input type="email" class="form-control" id="user_name" placeholder="Title, Author, ISBN...">
+        </div>
+        <div class="form-group">
+      <label for="user_topic">Topic</label>
+      <select class="form-control custom-select" id="user_gender">
+        <option></option>
+        <option>This</option>
+        <option>That</option>
+      </select>
+    </div>
+        <div class="form-group">
+        <imnput type="hidden" id="user_age_min" name="user_age_min"/>
+        <imnput type="hidden" id="user_age_max" name="user_age_max"/>
+        </div>
+          <div class="form-group">
+      <label for="user_sort">Sort</label>
+      <select class="form-control custom-select" id="user_sort">
+        <option>A-Z</option>
+        <option>Z-A</option>
+        <option>Price ascending</option>
+        <option>Price descending</option>
+        <!-- <option>Most liked</option> -->
+        <option>Random</option>
+      </select>
+    </div>
+
+          <div class="form-group">
+      <label class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">With cover</span>
+  </label>
+    </div>
+          <div class="form-group">
+      <label class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Free</span>
+  </label>
+    </div>
+          <div class="form-group">
+            <a href="#">Submit</a>
+          </div>
+      </form>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+   <!-- footer -->
+
+   <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
+      <li class="menu__item"><a class="menu__link" href="browse.html">Browse</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;<span id="currentYear"></span> The eBookVerse Project | All Rights Reserved.</p>
+  </footer>
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src=" assets/js/navbar-light.js"></script>
+  <script src=" assets/js/filterMenu.js"></script>
+  <script src=" assets/js/currentYear.js"></script>
+
+</body>

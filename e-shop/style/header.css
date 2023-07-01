@@ -66,13 +66,21 @@ header .logo .sec {
     background-size: cover;
   }
 
-  #top button {
+  #top a {
     padding: 8px;
+    border: 1px solid var(--black);
+    border-radius: .24em;
+    color: var(--black);
   }
 
-  #top button:hover {
+  #top a:hover {
     cursor: pointer;
+    color: #e4c4a1;
+    border: 1.2px solid #e4c4a1;
+    font-weight: 600;
+    background-color: var(--black);
   }
+
 
 
   header {
