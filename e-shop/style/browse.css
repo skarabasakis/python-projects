@@ -18,11 +18,16 @@
 } */
 
 .browse-content {
-  display: block;
-  margin-bottom: 3000000px;
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
 }
 
-.browse-content h1#title {
+
+h1#title {
   padding: 2em 0;
 }
 
@@ -75,6 +80,10 @@ select {
 
 input, select {
   padding-left: 10px;
+  border: none;
+
+  font-size: 15px;
+  height: 20px;
 }
 
 input[type="checkbox"] {
@@ -109,8 +118,8 @@ input[type="checkbox"] {
 input[type="checkbox"]::before {
   content: "";
   margin-left: -10px;
-  width: 0.9em;
-  height: 0.9em;
+  width: 0.95em;
+  height: 0.95em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   box-shadow: 200px 200px 400px 200px #e4c4a1 inset;
@@ -155,3 +164,39 @@ input[type="checkbox"]:checked::before {
 
 .form-group:last-child {margin-top:1em}
 .form-group {margin: .7em 0}
+
+
+
+@media screen and (min-width:2000px) {
+
+  .cards_item {
+    padding: 0;
+    flex-basis: 6,55%!important;
+  }
+  
+}
+
+
+@media screen and (min-width:1800px) {
+
+  .widget {width: 20%;margin: 0 0 5em 0}
+  input, select {width: 50%;height: 30px;font-size: 17px;}
+
+}
+
+
+@media screen and (max-width:1200px) {
+
+  .browse-content {display: block;}
+
+  .widget {width: 100%;margin: 0 0 5em 0}
+  input, select {width: 50%;height: 30px;font-size: 17px;}
+  
+  
+}
+
+@media screen and (max-width:400px) {
+  h1#title {line-height: calc(1em + 10px);}
+  .widget{margin-bottom: 20px;}
+  .cards_item {padding: 0;}
+}
