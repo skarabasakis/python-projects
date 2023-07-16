@@ -33,18 +33,21 @@
     </div>
     <div class="logo">
       eBookVerse</div>
-      <div class="nav-content">
-    <div class="nav-items">
 
-      <li><a href="browse.html">Browse</a></li>
-      <li><a href="#">About us</a></li>
-      
+    <div class="nav-content">
+      <div class="nav-items">
+        <div class="inner-logo">
+          eBookVerse</div>
+        <ul>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="#">About us</a></li>
+        
+      </div>
+      <div class="cart">
+        <span class="count">1</span>
+        <i class="fas fa-shopping-bag"></i>
+      </div>
     </div>
-    <div class="cart">
-      <span class="count">1</span>
-      <i class="fas fa-shopping-bag"></i>
-    </div>
-  </div>
     <div class="search-icon">
       <span class="fas fa-search"></span>
     </div>
@@ -57,7 +60,8 @@
       </div>
       <span class="fas fa-times"></span>
     </div>
-    <form action="#">
+  </ul>
+    <form class="form-container" action="#">
       <input type="search" class="search-data" placeholder="Search titles, authors, ISBN..." required>
       <button type="submit" class="fas fa-search"></button>
     </form>
@@ -135,8 +139,8 @@
 
   </ul>
 
-<!-- Pagination -->
-<!-- <div id="pagination" class="container">  
+  <!-- Pagination -->
+  <!-- <div id="pagination" class="container">  
   <ul class="page">
       <li class="page__btn"><span class="fas fa fa-arrow-left"></span></li>
       <li class="page__numbers"> 1</li>
