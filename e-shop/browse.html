@@ -16,8 +16,9 @@
 
   <link rel="stylesheet" href="style/header.css">
   <link rel="stylesheet" href="style/navbar.css">
-  <link rel="stylesheet" href="style/pagination.css">
+  <link rel="stylesheet" href="style/cart.css">
   <link rel="stylesheet" href="style/card.css">
+  <link rel="stylesheet" href="style/pagination.css">
 
   <link rel="stylesheet" href="style/footer.css">
 
@@ -28,19 +29,27 @@
 </head>
 
 <body>
+  
   <nav>
     <div class="menu-icon">
       <span class="fas fa-bars"></span>
     </div>
     <div class="logo">
-      <a href="index.html">eBookVerse</a>
-    </div>
-    <div class="nav-items">
+      eBookVerse</div>
 
-      <li><a href="#">Browse</a></li>
-      <li><a href="#">About us</a></li>
-
-      <li><a href="#">Cart</a></li>
+    <div class="nav-content">
+      <div class="nav-items">
+        <div class="inner-logo">
+          eBookVerse</div>
+        <ul>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="#">About us</a></li>
+        
+      </div>
+      <div class="cart">
+        <span class="count">1</span>
+        <i class="fas fa-shopping-bag"></i>
+      </div>
     </div>
     <div class="search-icon">
       <span class="fas fa-search"></span>
@@ -54,11 +63,13 @@
       </div>
       <span class="fas fa-times"></span>
     </div>
-    <form action="#">
+  </ul>
+    <form class="form-container" action="#">
       <input type="search" class="search-data" placeholder="Search titles, authors, ISBN..." required>
       <button type="submit" class="fas fa-search"></button>
     </form>
   </nav>
+
   <h1 id="title">Browse by Category</h1>
   <div class="browse-content">
     
