@@ -1,27 +1,15 @@
 .cart {
     position: relative;
-    display: block;
+    display: inline-block;
     width: 28px;
     height: 28px;
-    height: auto;
-    overflow: hidden;
+    overflow: visible;
     font-size: 17.5px;
 }
 
-.cart:hover {
-    cursor: pointer;
-}
-
-.cart:hover>.count {
+.cart:hover .count {
     background-color: var(--black);
 }
-
-.cart:active {
-    animation: blinker 1s step-start infinite;
-}
-
-
-
 
 .cart .count {
     position: absolute;
@@ -41,9 +29,61 @@
     font-weight: bold;
 }
 
+.cart .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background: transparent;
+    /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
+    backdrop-filter: blur(20.5px);
+    -webkit-backdrop-filter: blur(20.5px);
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: .5em;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.cart .dropdown-menu::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: var(--black);
+    margin: -10px 10px 0;
+}
+
+.cart:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart:hover {
+    cursor: pointer;
+}
+
+/* .cart:active {
+    animation: blinker 1s step-start infinite;
+}
+
 @keyframes blinker {
     50% {
         opacity: 0;
     }
+} */
+
+h1.cart-title {
+    color: #333;
+    font-size: 2em;
+}
+
+.cart-content {
+    display: block;
+    width: 100%;
 }
 
