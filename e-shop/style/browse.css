@@ -37,7 +37,7 @@ h1#title {
   padding: 0.75rem 1.25rem;
   width: 30%;
   height: 50%;
-  color: #e4c4a1;
+  color: var(--gold);
   background-color: var(--black);
   border-radius: 2px;
   box-shadow: 0 3px 6px var(--black-shadow);
@@ -45,7 +45,7 @@ h1#title {
 }
 
 .widget h2 {
-  background-color: #e4c4a1;
+  background-color: var(--gold);
   color: var(--black);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -69,12 +69,12 @@ h1#title {
 }
 
 .form-group span {
-  color: #e4c4a1;
+  color: var(--gold);
 }
 
 .form-group input,
 select {
-  background-color: #e4c4a1;
+  background-color: var(--gold);
   border-radius: 8.6em;
 }
 
@@ -122,9 +122,9 @@ input[type="checkbox"]::before {
   height: 0.95em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: 200px 200px 400px 200px #e4c4a1 inset;
--webkit-box-shadow: 200px 200px 400px 200px #e4c4a1 inset;
--moz-box-shadow: 200px 200px 400px 200px #e4c4a1 inset;
+  box-shadow: 200px 200px 400px 200px var(--gold) inset;
+-webkit-box-shadow: 200px 200px 400px 200px var(--gold) inset;
+-moz-box-shadow: 200px 200px 400px 200px var(--gold) inset;
 
   background-color: CanvasText;
 
@@ -148,18 +148,18 @@ input[type="checkbox"]:checked::before {
 
 .widget a {
   padding: 8px;
-  border: 1px solid #e4c4a1;
+  border: 1px solid var(--gold);
   border-radius: .24em;
-  color: #e4c4a1;
+  color: var(--gold);
   transition: all ease-in-out .2s;
 }
 
 .widget a:hover {
   cursor: pointer;
   color: var(--black);
-  /* border: 1.2px solid #e4c4a1; */
+  /* border: 1.2px solid var(--gold); */
   /* font-weight: 600; */
-  background-color: #e4c4a1;
+  background-color: var(--gold);
 }
 
 .form-group:last-child {margin-top:1em}

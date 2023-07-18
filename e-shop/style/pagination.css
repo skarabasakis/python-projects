@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     background: inherit;
-    color: #e4c4a1;
+    color: var(--gold);
   }
   
   ul {
@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #e4c4a1;
+    color: var(--gold);
     cursor: pointer;
   }
   .item span {

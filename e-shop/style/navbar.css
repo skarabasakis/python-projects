@@ -1,7 +1,7 @@
 nav {
     font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     z-index: 99;
-    background: transparent;
+    background: #ffffff71;
     /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
     backdrop-filter: blur(20.5px);
     -webkit-backdrop-filter: blur(20.5px);
@@ -23,7 +23,7 @@ nav {
 }
 
 .nav-dark {
-    background: var(--black-shadow);
+    background: rgba(51, 51, 85, 0.877);
     /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
     backdrop-filter: blur(20.5px);
     -webkit-backdrop-filter: blur(20.5px);
@@ -40,7 +40,7 @@ nav {
 .nav-dark .cart .dropdown-menu {background: var(--black-shadow);}
 
 .nav-dark .nav-items li a:hover {
-    color: #e4c4a1 !important;
+    color: var(--gold) !important;
 }
 
 .nav-dark form.active {
@@ -48,20 +48,24 @@ nav {
 }
 
 .nav-dark form.active input {
-    color: #e4c4a1;
+    color: var(--gold);
 }
 
 .nav-dark form.active::after {
     background-color: var(--black);
 }
 
+.nav-dark form.active::before{
+    color: var(--black);
+}
+
 .nav-dark form button:hover {
     color: var(--black) !important;
-    background-color: #e4c4a1;
+    background-color: var(--gold);
 }
 
 .nav-dark form button {
-    color: #e4c4a1;
+    color: var(--gold);
     background-color: transparent;
 }
 
@@ -235,7 +239,7 @@ nav .search-icon {
         left: -100%;
         padding: 10px 50px 0 50px;
         text-align: center;
-        background: var(--black-shadow);
+        background: rgba(51, 51, 85, 0.877);
         /* box-shadow: 0 8px 32px 0 rgba(85, 83, 83, 0.37); */
         backdrop-filter: blur(20.5px);
         -webkit-backdrop-filter: blur(20.5px);
@@ -281,10 +285,9 @@ nav .search-icon {
         height: 0;
         z-index: -1;
         border: 10px solid transparent;
-        border-bottom-color: var(--black);
+        border-bottom-color: var(--dark);
         margin: -20px 0 0;
     }
-
 
     nav form:after {
         position: absolute;
@@ -355,7 +358,7 @@ nav .search-icon {
     }
 
     nav .nav-items li a:hover {
-        color: #e4c4a1;
+        color: var(--gold);
     }
 
     .searchbar {

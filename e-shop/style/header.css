@@ -75,8 +75,8 @@ header .logo .sec {
 
   #top a:hover {
     cursor: pointer;
-    color: #e4c4a1;
-    border: 1.2px solid #e4c4a1;
+    color: var(--gold);
+    border: 1.2px solid var(--gold);
     font-weight: 600;
     background-color: var(--black);
   }
