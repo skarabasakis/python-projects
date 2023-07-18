@@ -30,7 +30,9 @@
 }
 
 .cart .dropdown-menu {
+    z-index: 999;
     opacity: 0;
+    cursor: default;
     visibility: hidden;
     position: absolute;
     top: calc(100% + 5px);

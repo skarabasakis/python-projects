@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+body {
+	min-height: 100vh;
+	font-family: Inter;
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	justify-content: center;
+	background: #e4e4e4;
+}
+.card {
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	gap: 14px;
+	color: #50545e;
+	background: #ffffff;
+	border: 1px solid #bec0c5;
+	box-shadow: 0px 2px 8px rgba(32, 37, 50, 0.08),
+		0px 2px 4px rgba(32, 37, 50, 0.03);
+	border-radius: 6px;
+	width: 360px;
+	.title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0.2px;
+		color: #838791;
+		flex-grow: 1;
+	}
+	.close {
+		border-radius: 4px;
+		display: flex;
+		cursor: pointer;
+		width: 24px;
+		height: 24px;
+		align-items: center;
+		color: #50545e;
+		justify-content: center;
+		transition: 0.2s ease;
+		svg {
+			width: 18px;
+			height: 18px;
+			fill: currentColor;
+		}
+		&:hover {
+			background: #f2f2f2;
+		}
+	}
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 8px;
+	}
+	h5 {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		color: #202532;
+		margin-bottom: 8px;
+	}
+	h4 {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		color: #202532;
+	}
+	p {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.2px;
+		color: inherit;
+	}
+	.card-header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+	}
+	&.row {
+		.card-content {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			gap: 16px;
+			width: 100%;
+			.content {
+				flex-grow: 1;
+				gap: 8px;
+			}
+		}
+	}
+	&.dark {
+		background: #202532;
+		color: #fff;
+		.card-header {
+			align-items: flex-start;
+		}
+		.icon {
+			margin-right: 1rem;
+		}
+		.close {
+			color: #fff;
+			&:hover {
+				background: rgba(#f2f2f2, 0.1);
+			}
+		}
+		.content {
+			flex: 1;
+			.title {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 16px;
+				margin-bottom: 8px;
+				letter-spacing: 0.2px;
+				color: #fff;
+				flex-grow: 1;
+			}
+			p {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 20px;
+				letter-spacing: 0.2px;
+				margin-bottom: 8px;
+				color: rgba(255, 255, 255, 0.72);
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 20px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+// demo
+.card + .card {
+	margin-left: 1rem;
+}
+* {
+	box-sizing: border-box;
+}
