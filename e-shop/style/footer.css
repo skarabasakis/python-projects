@@ -66,6 +66,8 @@
     font-weight: 300;
 }
 
+.waves {z-index: 9;}
+
 .wave {
     position: absolute;
     top: -100px;

@@ -40,7 +40,8 @@
       <div class="nav-items">
         <div class="inner-logo">
           <a href="index.html">
-            eBookVerse</a></div>
+            eBookVerse</a>
+        </div>
         <ul>
           <li><a href="browse.html">Browse</a></li>
           <li><a href="#">About us</a></li>
@@ -51,9 +52,74 @@
         <i class="fas fa-shopping-bag"></i>
         <div class="dropdown-menu">
           <h1 class="cart-title">Cart</h1>
-        <div class="cart-content">
-          
-        </div>
+
+          <div id='cart-popup'>
+            <ul>
+              <li>
+                <div class='cart-item' href='#'>
+                  <div class='cart-item-img'><img
+                      src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw"
+                      alt=""></div>
+                  <div class='cart-item-content'>
+                    <h4>The Art of Doing Nothing</h4>
+                    <p>&euro;29,99</p>
+                  </div>
+                </div>
+                <a class='cart-item-close' href='#'>
+                  ×
+                </a>
+              </li>
+              <li>
+                <div class='cart-item' href='#'>
+                  <div class='cart-item-img'><img
+                      src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw"
+                      alt=""></div>
+                  <div class='cart-item-content'>
+                    <h4>The Art of Doing Nothing</h4>
+                    <p>&euro;29,99</p>
+                  </div>
+                </div>
+                <a class='cart-item-close' href='#'>
+                  ×
+                </a>
+              </li>
+              <li>
+                <div class='cart-item' href='#'>
+                  <div class='cart-item-img'><img
+                      src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw"
+                      alt=""></div>
+                  <div class='cart-item-content'>
+                    <h4>The Art of Doing Nothing</h4>
+                    <p>&euro;29,99</p>
+                  </div>
+                </div>
+                <a class='cart-item-close' href='#'>
+                  ×
+                </a>
+              </li>
+              <li>
+              <div class='cart-item' href='#'>
+                <div class='cart-item-img'><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwMnYL-Wv1IJyLcz2YVqAoCA5JbrXuKFAV82n01ZLbsg&s"
+                    alt=""></div>
+                <div class='cart-item-content'>
+                  <h4>How to cook all alone</h4>
+                  <p>&euro;48,95</p>
+                </div>
+              </div>
+              <a class='cart-item-close' href='#'>
+                ×
+              </a>
+              </li>
+            </ul>
+            <div id='subtotal'>
+              <p>Subtotal:</p>
+              <p><strong>$390</strong></p>
+            </div>
+            <a id='checkout' href='#'>Checkout</a>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -78,7 +144,7 @@
 
   <h1 id="title">Browse by Category</h1>
   <div class="browse-content">
-    
+
 
 
     <div class="widget user_widget_search">
@@ -133,20 +199,20 @@
     </div>
 
     <ul class="cards">
-    <li class="cards_item">
-      <div class="card">
-        <img
-          src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw">
-        <p class="author">Stelios Karabasakis</p>
+      <li class="cards_item">
+        <div class="card">
+          <img
+            src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw">
+          <p class="author">Stelios Karabasakis</p>
 
-        <h1>The Art of Doing Nothing</h1>
+          <h1>The Art of Doing Nothing</h1>
 
-        <p class="price">&euro;29,99</p>
-        <p><button>View</button></p>
-      </div>
-    </li>
+          <p class="price">&euro;29,99</p>
+          <p><button>View</button></p>
+        </div>
+      </li>
 
-   
+
       <li class="cards_item">
         <div class="card">
           <img
@@ -243,24 +309,24 @@
 
 
 
-</div>
+  </div>
 
 
-    <!-- Pagination -->
-    <div id="pagination" class="container">
-      <ul class="page">
-        <li class="page__btn"><span class="fas fa fa-arrow-left"></span></li>
-        <li class="page__numbers"> 1</li>
-        <li class="page__numbers active">2</li>
-        <li class="page__numbers">3</li>
-        <li class="page__numbers">4</li>
-        <li class="page__numbers">5</li>
-        <li class="page__numbers">6</li>
-        <li class="page__dots">...</li>
-        <li class="page__numbers"> 10</li>
-        <li class="page__btn"><span class="fas fa fa-arrow-right"></span></li>
-      </ul>
-    </div>
+  <!-- Pagination -->
+  <div id="pagination" class="container">
+    <ul class="page">
+      <li class="page__btn"><span class="fas fa fa-arrow-left"></span></li>
+      <li class="page__numbers"> 1</li>
+      <li class="page__numbers active">2</li>
+      <li class="page__numbers">3</li>
+      <li class="page__numbers">4</li>
+      <li class="page__numbers">5</li>
+      <li class="page__numbers">6</li>
+      <li class="page__dots">...</li>
+      <li class="page__numbers"> 10</li>
+      <li class="page__btn"><span class="fas fa fa-arrow-right"></span></li>
+    </ul>
+  </div>
 
 
 
