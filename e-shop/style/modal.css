@@ -1,0 +1,105 @@
+.modal-window {
+    position: fixed;
+    background-color: var(--black-shadow);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-window > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border: 1px solid var(--gold);
+
+    background: rgba(51, 51, 85, 0.877);
+    backdrop-filter: blur(18.5px);
+    -webkit-backdrop-filter: blur(18.5px);
+
+    color: var(--white);
+}
+.modal-window header {
+    font-weight: bold;
+}
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 100%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+}
+.modal-close:hover {
+    color: var(--white);
+}
+.modal-window h1 {color: var(--gold)}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.modal-window > div {
+    border-radius: 1rem;
+}
+.modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+
+
+#open-modal ul.info-list li{font-size: 13px;}
+#open-modal ul.info-list li.info h3 {
+    color: var(--white);
+}
+
+#open-modal ul.info-list li.info p {
+    color: var(--gold);
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .modal-window > div {
+        width: 90%;
+    padding: 1em;
+    }
+
+    ul.info-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px;
+    }
+
+    .contributor-info .info {margin-right: 0;}
+
+.modal-close {
+    top: -10px;
+    right: -10px;
+}
+
+.modal-window h1 {
+    padding-top: .5em;
+}
+}
