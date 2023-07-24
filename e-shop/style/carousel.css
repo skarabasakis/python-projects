@@ -8,7 +8,7 @@
     background-color: var(--black);
   }
   .carousel-wrapper h2{
-    font-family:"SF Pro Display";
+    font-family: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 40px;
     color: var(--gold);
   }
@@ -36,20 +36,20 @@
     background-color: #008CBA;
   }
   
-  .carousel img:hover .img-overlay {
-    opacity: 0.7;
+  .img-overlay:hover {
+    opacity: 1;
   }
   
   .img-text {
     color: white;
     font-size: 20px;
-    position: absolute;
-    top: 50%;
+    position: relative;
+    /* top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: center; */
   }
 
 

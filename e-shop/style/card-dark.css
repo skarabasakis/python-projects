@@ -1,0 +1,96 @@
+.card * {
+    font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: 1em 0;
+    text-align: center;
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 0 9px var(--dark-gold);
+
+  }
+
+  .card h1 {
+    font-weight: 500;
+    padding: 10px;
+    color: var(--white);
+  }
+
+  .card img {
+    max-height: 370px;
+    width: 100%;
+  }
+
+  .price {
+    color: var(--dark-gold);
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+
+  .author {
+    text-align: left;
+    color: var(--greyLight);
+    padding-left: 1em;
+    padding-top: .68em;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: var(--white);
+    background-color: var(--black);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-top: 1px solid var(--gold);
+  }
+
+  .card button:hover {
+    color: var(--black);
+    background-color: #ececec;
+  }
+
+
+
+  /* GRID */
+
+
+.cards {
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.cards_item {
+flex-basis: 25%;
+padding: .89rem;
+}
+
+@media (max-width: 1000px) {
+.cards_item {
+  flex-basis: 33.3%;
+}
+}
+
+@media (max-width: 856px) {
+.cards_item {
+  flex-basis: 50%;
+}
+}
+
+@media (max-width: 526px) {
+.cards_item {
+  flex-basis: 100%;
+}
+.card {max-width: 70%;}
+}
