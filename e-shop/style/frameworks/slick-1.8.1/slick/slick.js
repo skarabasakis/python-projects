@@ -7,7 +7,7 @@
                    |__/
 
  Version: 1.8.0
-  Author: Ken Wheeler
+  contributor: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
     Repo: http://github.com/kenwheeler/slick
