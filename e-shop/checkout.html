@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <title>eBookVerse | Where Digital Pages Come Alive </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+
+
+  <link rel="stylesheet" href="style/theme.css">
+  <link rel="stylesheet" href="style/checkout.css">
+
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/navbar.css">
+  <link rel="stylesheet" href="style/cart.css">
+
+
+
+  <link rel="stylesheet" href="style/footer.css">
+
+
+  <link rel="stylesheet" href="">
+  <link rel="shortcut icon" href="" />
+
+</head>
+
+<body>
+  <nav>
+    <div class="menu-icon">
+      <span class="fas fa-bars"></span>
+    </div>
+    <div class="logo"><a href="index.html">
+        eBookVerse</a></div>
+
+    <div class="nav-content">
+      <div class="nav-items">
+        <div class="inner-logo">
+          <a href="index.html">
+            eBookVerse</a>
+        </div>
+        <ul>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="#">About us</a></li>
+
+      </div>
+      <div class="cart">
+        <span class="count">4</span>
+        <i class="fas fa-shopping-bag"></i>
+        <div class="dropdown-menu">
+          <div class="cart-title-container">
+            <h1 class="cart-title">Cart</h1>
+            <a id='empty' href='#'><i class='fa fa-trash-alt'></i></a>  
+          </div>
+          
+          <div id='cart-popup'>
+            <ul>
+              <li>
+                <div class='cart-item' href='#'>
+                  <div class='cart-item-img'><img
+                      src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw"
+                      alt=""></div>
+                  <div class='cart-item-content'>
+                    <h4>The Art of Doing Nothing</h4>
+                    <p>&euro;29,99</p>
+                  </div>
+                </div>
+                <a class='cart-item-close' href='#'>
+                  ×
+                </a>
+              </li>
+              <li>
+                <div class='cart-item' href='#'>
+                  <div class='cart-item-img'><img
+                      src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw"
+                      alt=""></div>
+                  <div class='cart-item-content'>
+                    <h4>The Art of Doing Nothing</h4>
+                    <p>&euro;29,99</p>
+                  </div>
+                </div>
+                <a class='cart-item-close' href='#'>
+                  ×
+                </a>
+              </li>
+              <li>
+                <div class='cart-item' href='#'>
+                  <div class='cart-item-img'><img
+                      src="https://media.licdn.com/dms/image/D4D03AQEOAXbtvOFuVg/profile-displayphoto-shrink_200_200/0/1674503178502?e=1693440000&v=beta&t=aDJEf2k3PH4uJIbHsNMZ6G17eX0RAgJ4NPjC0yW62Hw"
+                      alt=""></div>
+                  <div class='cart-item-content'>
+                    <h4>The Art of Doing Nothing</h4>
+                    <p>&euro;29,99</p>
+                  </div>
+                </div>
+                <a class='cart-item-close' href='#'>
+                  ×
+                </a>
+              </li>
+              <li>
+              <div class='cart-item' href='#'>
+                <div class='cart-item-img'><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwMnYL-Wv1IJyLcz2YVqAoCA5JbrXuKFAV82n01ZLbsg&s"
+                    alt=""></div>
+                <div class='cart-item-content'>
+                  <h4>How to cook all alone</h4>
+                  <p>&euro;48,95</p>
+                </div>
+              </div>
+              <a class='cart-item-close' href='#'>
+                ×
+              </a>
+              </li>
+            </ul>
+            <div id='subtotal'>
+              <p>Subtotal:</p>
+              <p>&euro;140</p>
+            </div>
+            <a id='checkout' href='checkout.html'>Checkout</a>
+          </div>
+          </div>
+          </div>
+
+          
+    </div>
+    <div class="search-icon">
+      <span class="fas fa-search"></span>
+    </div>
+    <div class="cancel-icon">
+      <div class="searchbar">
+        <input type="text" placeholder="search">
+        <div class="icon">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+      <span class="fas fa-times"></span>
+    </div>
+    </ul>
+    <form class="form-container" action="#">
+      <input type="search" class="search-data" placeholder="Search titles, contributors, ISBN..." required>
+      <button type="submit" class="fas fa-search"></button>
+    </form>
+  </nav>
+
+ 
+  
+
+
+
+  <div class="flex-center">
+    <h1 class="title">Checkout</h1>
+    <form class="popup flex p-lg">
+      <div class="close-btn pointer flex-center p-sm">
+        <i class="ai-cross"></i>
+      </div>
+      
+        <!-- CARD FORM -->
+        <div class="flex-fill flex-just-center flex-vertical">
+          <div class="header flex-between flex-vertical-center">
+            <div class="flex-vertical-center">
+  <!--             <i class="ai-bitcoin-fill size-xl pr-sm f-main-color"></i> -->
+  <!--             <span class="title">
+                <strong>eBookVerse</strong><span>Pay</span>
+              </span> -->
+            </div>
+          </div>
+          <div class="card-data flex-just-center flex-vertical">
+            
+            <!-- Card Number -->
+            
+              <div class="card-property-title">
+                <strong id="title">Pay via PayPal</strong>
+                <span id="title">Click the button below to complete your purchase</span>
+              
+              
+            </div>
+            
+            
+            <!-- Name -->
+            <div class="flex-between">
+              <div class="card-property-title">
+                <strong>Name</strong>
+                <span>Enter your name</span>
+              </div>
+              <div class="card-property-value">
+                <div class="input-container">
+                  <input id="name" data-bound="name_mock" data-def="Mr. Cardholder" type="text" class="uppercase" placeholder="">
+                  <i class="ai-person"></i>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          <div class="action flex-center">
+            <!-- <button type="submit" class="b-main-color pointer">Pay Now</button> -->
+            <script src="https://www.paypal.com/sdk/js?client-id=test&currency=EUR"></script>
+            <div id="paypal-button-container"></div>
+          </div>
+        </div>
+      
+        <!-- SIDEBAR -->
+        <div class="sidebar flex-vertical">
+          <div>
+          
+          </div>
+          <div class="purchase-section flex-fill flex-vertical">
+            
+            <div class="card-mockup flex-vertical">
+              <div class="flex-fill flex-between">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#cc9933}</style><path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/></svg>
+                <i class="ai-wifi size-lg f-secondary-color"></i>
+              </div>
+              <div>
+                <div id="name_mock" class="size-md pb-sm uppercase ellipsis">name</div>
+                <div class="size-md pb-md">
+                  <strong>
+                    <span class="pr-sm">
+                      &#x2022;&#x2022;&#x2022;&#x2022;
+                    </span>
+                    <span id="carddigits_mock">0000</span>
+                  </strong>
+                </div>
+                <div class="flex-between flex-vertical-center">
+                  <strong class="size-md">
+                    <span id="date">00/00</span>
+                  </strong>
+                                 
+                
+  
+                </div>
+              </div>
+            </div>
+            
+            <ul class="purchase-props">
+              <li class="flex-between">
+                <span>Payment Method</span>
+                <strong>PayPal</strong>
+              </li>
+              <li class="flex-between">
+                <span>Order ID</span>
+                <strong>429252965</strong>
+              </li>
+              <li class="flex-between">
+                <span>Products</span>
+                <strong>4</strong>
+              </li>
+              <li class="flex-between">
+                <span>VAT (20%)</span>
+                <strong>&euro;100.00</strong>
+              </li>
+            </ul>
+          </div>
+          <div class="separation-line"></div>
+          <div class="total-section flex-between flex-vertical-center">
+            <div class="flex-fill flex-vertical">
+              <div class="total-label f-secondary-color">You have to Pay</div>
+              <div>
+                <strong>549</strong>
+                <small>.99 <span class="f-secondary-color">Euro</span></small>
+              </div>
+            </div>
+            <i class="ai-coin size-lg"></i>
+          </div>
+        </div>
+    </d>
+  </div>
+  
+
+
+
+    
+
+
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <!-- <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div> -->
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
+      <li class="menu__item"><a class="menu__link" href="browse.html">Browse</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;<span id="currentYear"></span> The eBookVerse Project | All Rights Reserved.</p>
+  </footer>
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src=" assets/js/navbar-light.js"></script>
+  <script src=" assets/js/currentYear.js"></script>
+  <script src=" assets/js/inputToCardMockup.js"></script>
+
+  <script>
+
+    paypal.Buttons({
+
+        
+
+      // Order is created on the server and the order id is returned
+
+      createOrder() {
+
+        return fetch("/my-server/create-paypal-order", {
+
+          method: "POST",
+
+          headers: {
+
+            "Content-Type": "application/json",
+
+          },
+
+          // use the "body" param to optionally pass additional order information
+
+          // like product skus and quantities
+
+          body: JSON.stringify({
+
+            cart: [
+
+              {
+
+                sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+
+                quantity: "YOUR_PRODUCT_QUANTITY",
+
+              },
+
+            ],
+
+          }),
+
+        })
+
+        .then((response) => response.json())
+
+        .then((order) => order.id);
+
+      },
+
+      // Finalize the transaction on the server after payer approval
+
+      onApprove(data) {
+
+        return fetch("/my-server/capture-paypal-order", {
+
+          method: "POST",
+
+          headers: {
+
+            "Content-Type": "application/json",
+
+          },
+
+          body: JSON.stringify({
+
+            orderID: data.orderID
+
+          })
+
+        })
+
+        .then((response) => response.json())
+
+        .then((orderData) => {
+
+          // Successful capture! For dev/demo purposes:
+
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          const transaction = orderData.purchase_units[0].payments.captures[0];
+
+          alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+
+          // When ready to go live, remove the alert and show a success message within this page. For example:
+
+          // const element = document.getElementById('paypal-button-container');
+
+          // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+          // Or go to another URL:  window.location.href = 'thank_you.html';
+
+        });
+
+      }
+
+    }).render('#paypal-button-container');
+
+  </script>
+
+</body>
