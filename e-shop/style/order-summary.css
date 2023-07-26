@@ -1,0 +1,45 @@
+.codevoc-b2b {font-size: 14px}
+.p-0{padding:0;}
+.codevoc-b2b .box{border:1px solid var(--black);border-radius: .25rem!important;padding:10px;margin:5px 0}
+.codevoc-b2b .btn-colored{display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;}
+.codevoc-b2b .b2b-action-btn .btn {color:var(--black); }
+.codevoc-b2b .b2b-action-btn a:hover {color: var(--gold);
+    background-color: var(--black);
+    border-color: var(--gold);}
+.codevoc-b2b .highlighet-section{background:rgba(0,0,0,.05)}
+
+.codevoc-b2b table tr:hover{background:var(--black);color: var(--white);-webkit-transition:all 400ms ease-out;-moz-transition:all 400ms ease-out;-o-transition:all 400ms ease-out;transition:all 400ms ease-out}
+.codevoc-b2b table tr:hover .b2b-action-btn a {
+    color: var(--gold);
+}
+.btn:not(:disabled):not(.disabled) {
+    font-size: 13px;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}  
+
+.btn-outline-secondary:hover {
+    background: var(--black) !important;
+    color: var(--gold) !important;
+}
