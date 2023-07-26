@@ -1,0 +1,100 @@
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--gold);
+    overflow-x: hidden;
+  }
+
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--black);
+  }
+
+  .curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(85%, 60%);
+    background-color: var(--gold);
+  }
+
+  .curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: var(--black);
+    transform: translate(-4%, 40%);
+    z-index: -1;
+  }
+
+  .order-summary {
+    height: 100%;
+    margin-top: 5em;
+    color: var(--black);
+    background-color: var(--gold);
+  }
+
+  .order-summary h2 {
+    padding: 0.5em 0 .5em 1em;
+    color: var(--black);
+    margin-top: 2.5em;
+  }
+
+  .options {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  h2 {font-size: 15px; text-align: center;padding-top: 2rem;}
+
+  .thank-you {
+    display: block;
+    font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 7.5em;
+    width: 100%;
+    padding: 2em 20%;
+    color: var(--gold);
+    background-color: var(--black);
+  }
+
+  .thank-you p {
+    font-size: 3rem;
+    letter-spacing: -.5px;
+
+  }
+
+  .thank-you span {
+    font-size: 20px;
+    color: var(--white);
+  }
+
+  @media screen and (max-width: 440px) {
+    .options {flex-direction: column}
+    .thank-you p {font-size: 1em;}
+    .thank-you {padding: 5px}
+  }
