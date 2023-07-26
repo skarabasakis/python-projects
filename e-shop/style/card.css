@@ -50,7 +50,7 @@
 
     .card button:hover {
       color: var(--black);
-      background-color: #ececec;
+      background-color: var(--gold);
     }
 
 
