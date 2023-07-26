@@ -88,3 +88,10 @@ body {
     font-size: 20px;
     color: var(--white);
   }
+
+  @media screen and (max-width: 510px) {
+    section h1, section p {text-align:center;}
+    .curve {display:none}
+    .col-12{flex-direction: column !important}
+    .thank-you p {font-size: 2em}
+  }
